@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <form action="/quote" method="post">
+            <div class="form-group">
+                <h2 class="h2">Stock Quotes</h2>
+                <div class="form-control">
+                    <label for="symbol">Symbol</label>
+                    <input autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Stock" type="text">
+                </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Quote</button>
+        </form>
+        {% if quote %}
+            <br>
+            <table class="table table-bordered table-hover">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ quote['symbol'] }}</td>
+                        <td>{{ quote['price']|usd }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        {% endif %}
+    </div>
+{% endblock %}
