@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+            // TODO: Add code to check answers to questions
+            function checkAnswer(button) {
+                let answer = button.getAttribute("alter");
+                let response = document.getElementById("response1");
+
+                if (answer === "ac") {
+                    button.style.backgroundColor = "green";
+                    response.innerHTML = "Correct!";
+                    response.style.color = "green";
+                } else {
+                    button.style.backgroundColor = "red";
+                    response.innerHTML = "Incorrect!";
+                    response.style.color = "red";
+                }
+            }
+
+            function analyzeq2() {
+                // Variable to take text answer
+                let answer2 = document.getElementById("q2");
+                let response = document.getElementById("response2");
+                let a2 = answer2.value;
+                if (a2 === "666") {
+                    // Make text field green
+                    answer2.style.backgroundColor = "green";
+                    // pop text Correct below question
+                    response.innerHTML = "Correct!";
+                    response.style.color = "green";
+                }
+                else {
+                    // Make text field red
+                    answer2.style.backgroundColor = "red";
+                    // Show Incorrect below question
+                    response.innerHTML = "Incorrect!";
+                    response.style.color = "red";
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the capital of Brazil?</h3>
+                <div id="response1"></div>
+                <button alter="aa" onclick="checkAnswer(this)">São Paulo</button>
+                <button alter="ab" onclick="checkAnswer(this)">Rio de Janeiro</button>
+                <button alter="ac" onclick="checkAnswer(this)">Brasilia</button>
+                <button alter="ad" onclick="checkAnswer(this)">Campinas</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response </h2>
+                <hr>
+
+                <!-- TODO: Add free response question here -->
+                <h3>What is the Number of The Beast?</h3>
+                <div id="response2"></div>
+                <input type="text" id="q2">
+                <button onclick="analyzeq2()">Check Answer</button>
+            </div>
+        </div>
+    </body>
+</html>

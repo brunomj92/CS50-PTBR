@@ -1,0 +1,6 @@
+1- Peça ao usuário o troco.
+2- Use as maiores moedas possíveis a cada passo
+3- Imprima o # de moedas usadas
+4- Se o usuário não fornecer um valor não negativo, seu programa deve solicitar novamente ao usuário uma quantia válida até que o usuário concorde.
+número mínimo de moedas possível: um inteiro seguido por \n
+você provavelmente desejará converter os dólares inseridos pelo usuário em centavos (ou seja, de um float para um int) para evitar pequenos erros que poderiam se acumular!
