@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: High O and low Omega. Takes much less time when already sorted, indicating less operations.
+
+sort2 uses: Merge Sort
+
+How do you know?: Lowest O. A lot quicker than others, unaffected by order of numbers.
+
+sort3 uses: Selection Sort
+
+How do you know?: High O and Omega. Takes approximately same time for all lists, indicating same amount of checks always.
